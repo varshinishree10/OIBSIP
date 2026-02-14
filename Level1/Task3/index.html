@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tempify</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+  <!--Title and Theme--> 
+  <div class="top-bar">
+    <h1 class="logo">Tempify</h1>
+
+    <label class="switch">
+      <input type="checkbox" onclick="toggleDarkMode()">
+      <span class="slider"></span>
+    </label>
+  </div>
+
+  <div class="container">
+    <h2>Tempify</h2>
+
+    <label>Degrees</label>
+    <input type="number" id="degrees" placeholder="Enter temperature">
+
+    <label>Type</label>
+    <select id="type">
+      <option value="celsius">Celsius → Fahrenheit</option>
+      <option value="fahrenheit">Fahrenheit → Celsius</option>
+      <option value="kelvin">Celsius → Kelvin</option>
+    </select>
+
+    <label>Decimal Places</label>
+    <input type="number" id="precision" value="2" min="0" max="6">
+
+    <label>Result</label>
+    <p id="result">--</p>
+
+    <button onclick="convertTemp()">Convert</button>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
